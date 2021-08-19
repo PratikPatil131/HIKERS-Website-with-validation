@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANK YOU</title>
+    <link rel="stylesheet" href="TT.css">
+    <link rel="stylesheet" href="reg.html">
+</head>
+<body>
+
+    <h2>Our team will reach out to you soon .. </h2>
+    <footer id="reg1">
+
+        <span >JOIN our community</span><br><br>
+        <span>REGISTRATION FORM</span><br><br>
+    
+        <form name="myForm" action="reg.html" onsubmit="return validateForm()" method="post">    
+
+            <label for="Firstname">First Name:</label>
+            <input type="text" placeholder="First name" name="firstname"><br><br>
+            
+            <label for="lastname">Last Name:</label>
+            <input type="text" placeholder="Last name" name="lastname"><br><br>
+            
+            <label for="mob">Mobile No:</label>
+            <input type="number" placeholder="Mobile" name="mob" required ><br><br>
+            
+            <label for="EMAIL">Email ID:</label>
+            <input type="email" placeholder="Email" name="EMAIL" required><br><br>
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" name="birthdate"> <br><br>
+
+            <input type="submit" value="submit" id="sub" >
+            
+                
+        </form>
+        
+</footer>
+        <script>
+                function validateForm() 
+                {
+                    let fname = document.forms["myForm"]["firstname"].value;
+                    if (fname == "") 
+                        {
+                           alert("First name must be filled out");
+                            return false;
+                        }
+
+                        let Lname = document.forms["myForm"]["lastname"].value;
+                    if (Lname == "") {
+                              alert("Last Name must be filled out");
+                              return false;
+                                }
+                        
+                     let mb = document.forms["myForm"]["mob"].value;
+                    if ( (mb.length < 10) || (mb.length > 10) ) 
+                        {
+                           alert("Enter valid contact number");
+                            return false;
+                        }
+               }
+
+        </script>
+
+</body>
+</html>
